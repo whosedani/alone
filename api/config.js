@@ -36,15 +36,17 @@ export default async function handler(req, res) {
     }
 
     try {
-      await fetch(`${KV_URL}/set/${CONFIG_KEY}`, {
+      const value = JSON.stringify(config);
+      const encoded = encodeURIComponent(value);
+      const kvRes = await fetch(`${KV_URL}/set/${CONFIG_KEY}/${encoded}`, {
         method: 'POST',
-        headers: {
-          Authorization: `Bearer ${KV_TOKEN}`,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(JSON.stringify(config))
+        headers: { Authorization: `Bearer ${KV_TOKEN}` }
       });
-      return res.status(200).json({ success: true });
+      const kvData = await kvRes.json();
+      if (kvData.result === 'OK') {
+        return res.status(200).json({ success: true });
+      }
+      return res.status(500).json({ error: 'Redis error', detail: kvData });
     } catch (e) {
       return res.status(500).json({ error: 'Failed to save' });
     }
