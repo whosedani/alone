@@ -591,8 +591,9 @@
     <div class="viral-inner reveal">
       <h2 class="viral-title">being alone is viral</h2>
       <div class="viral-embed">
-        <blockquote class="twitter-tweet" data-dnt="true" data-theme="light">
-          <a href="https://x.com/duj4a/status/2031804739231596837"></a>
+        <blockquote class="twitter-tweet" data-lang="en" data-dnt="true" data-theme="light">
+          <p lang="en" dir="ltr"></p>
+          <a href="https://x.com/duj4a/status/2031804739231596837?ref_src=twsrc%5Etfw"></a>
         </blockquote>
       </div>
     </div>
@@ -640,7 +641,6 @@
     </div>
   </footer>
 
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   <script>
     // ========== CONFIG ==========
     const DEFAULT_CONFIG = {
@@ -726,6 +726,21 @@
         const target = document.querySelector(href);
         if (target) target.scrollIntoView({ behavior: 'smooth' });
       });
+    });
+
+    // ========== TWITTER EMBED ==========
+    window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0], t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s); js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+      t._e = []; t.ready = function(f) { t._e.push(f); };
+      return t;
+    }(document, "script", "twitter-wjs"));
+
+    twttr.ready(function() {
+      twttr.widgets.load(document.getElementById('viral'));
     });
 
     // ========== INIT ==========
