@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>alone — silence is not empty</title>
+  <title>alone</title>
   <meta name="description" content="$alone on Solana. Solitude as a conscious choice. No wars, no noise, just peace.">
   <link rel="icon" href="./static/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -269,6 +269,35 @@
       font-size: 0.85rem;
       color: var(--text-muted);
       margin-top: 0.75rem;
+    }
+
+    /* ========== VIRAL ========== */
+    .viral {
+      background: white;
+      padding: 8rem 2rem;
+    }
+
+    .viral-inner {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .viral-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--text-primary);
+      margin-bottom: 3rem;
+    }
+
+    .viral-embed {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+    }
+
+    .viral-embed blockquote {
+      margin: 0 !important;
     }
 
     /* ========== HOW TO BUY ========== */
@@ -557,6 +586,18 @@
     </div>
   </section>
 
+  <!-- VIRAL -->
+  <section class="viral" id="viral">
+    <div class="viral-inner reveal">
+      <h2 class="viral-title">being alone is viral</h2>
+      <div class="viral-embed">
+        <blockquote class="twitter-tweet" data-dnt="true" data-theme="light">
+          <a href="https://x.com/duj4a/status/2031804739231596837"></a>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
   <!-- HOW TO BUY -->
   <section class="how-to-buy" id="how-to-buy">
     <div class="section-label">BEGIN</div>
@@ -599,6 +640,7 @@
     </div>
   </footer>
 
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   <script>
     // ========== CONFIG ==========
     const DEFAULT_CONFIG = {
