@@ -590,12 +590,7 @@
   <section class="viral" id="viral">
     <div class="viral-inner reveal">
       <h2 class="viral-title">being alone is viral</h2>
-      <div class="viral-embed">
-        <blockquote class="twitter-tweet" data-lang="en" data-dnt="true" data-theme="light">
-          <p lang="en" dir="ltr"></p>
-          <a href="https://x.com/duj4a/status/2031804739231596837?ref_src=twsrc%5Etfw"></a>
-        </blockquote>
-      </div>
+      <div class="viral-embed" id="tweet-container"></div>
     </div>
   </section>
 
@@ -740,7 +735,12 @@
     }(document, "script", "twitter-wjs"));
 
     twttr.ready(function() {
-      twttr.widgets.load(document.getElementById('viral'));
+      twttr.widgets.createTweet('2031804739231596837', document.getElementById('tweet-container'), {
+        theme: 'light',
+        dnt: true,
+        align: 'center',
+        width: 550
+      });
     });
 
     // ========== INIT ==========
