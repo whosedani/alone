@@ -1,0 +1,5 @@
+.DS_Store
+__MACOSX/
+.claude/
+.vercel
+node_modules/
