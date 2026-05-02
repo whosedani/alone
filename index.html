@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>alone</title>
-  <meta name="description" content="$alone on Solana. Solitude as a conscious choice. No wars, no noise, just peace.">
+  <meta name="description" content="$alone on Solana. Loneliness is the feeling everyone has and nobody posts. 100% of fees go to Mental Health America.">
   <link rel="icon" href="./static/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -354,6 +354,73 @@
       line-height: 1.6;
     }
 
+    /* ========== MHA ========== */
+    .mha {
+      background: linear-gradient(180deg, #F5F7FA 0%, white 100%);
+      padding: 8rem 2rem;
+    }
+
+    .mha-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .mha-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4.5vw, 3.25rem);
+      color: var(--text-primary);
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+    }
+
+    .mha-subtitle {
+      font-family: var(--font-body);
+      font-size: clamp(1rem, 1.6vw, 1.15rem);
+      color: var(--sky-deep);
+      font-weight: 400;
+      letter-spacing: 1px;
+      margin-top: 1rem;
+    }
+
+    .mha-body {
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      line-height: 2;
+      color: var(--text-secondary);
+      font-weight: 300;
+      margin-top: 2.5rem;
+    }
+
+    .mha-body a {
+      color: var(--text-primary);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .mha-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 2.5rem;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      letter-spacing: 1px;
+      color: var(--text-primary);
+      text-decoration: none;
+      padding: 0.85rem 1.75rem;
+      background: white;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 50px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .mha-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 28px rgba(0, 0, 0, 0.08);
+    }
+
     /* ========== FOOTER ========== */
     .footer {
       min-height: 60vh;
@@ -498,6 +565,15 @@
       .footer-links {
         gap: 1.5rem;
       }
+
+      .mha {
+        padding: 5rem 1.5rem;
+      }
+
+      .mha-body {
+        font-size: 1rem;
+        line-height: 1.85;
+      }
     }
   </style>
 </head>
@@ -536,7 +612,7 @@
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1 class="hero-title">alone</h1>
-      <p class="hero-subtitle">silence is not empty. it's full.</p>
+      <p class="hero-subtitle">alone is the feeling everyone has and nobody posts.</p>
     </div>
     <div class="scroll-hint">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -548,14 +624,14 @@
   <!-- MANIFESTO -->
   <section class="manifesto" id="manifesto">
     <div class="manifesto-inner reveal">
-      <h2 class="manifesto-title">You Don't Need Anyone To Be Whole.</h2>
+      <h2 class="manifesto-title">Loneliness Is Not About Being Alone.</h2>
       <p class="manifesto-body">
-        No group chats. No notifications. No timeline to scroll.
-        No wars to argue about. No algorithm deciding what you feel.
-        Just you. The wind. The grass under your feet.
-        The sound of absolutely nothing.
-        You forgot what this feels like.
-        Alone is not lonely. Alone is when you finally hear yourself.
+        Loneliness is the gap between the connection you want and the connection you have.
+        You can feel it in a crowd. In a group chat. At your own birthday.
+        The US Surgeon General called it an epidemic. He wasn't being dramatic.
+        Chronic loneliness hits the body like 15 cigarettes a day. It rewires the brain.
+        1 in 2 adults lives with it. Most of them will never say it out loud.
+        $alone is the part nobody admits.
       </p>
       <div class="manifesto-divider"></div>
     </div>
@@ -563,23 +639,23 @@
 
   <!-- STATS -->
   <section class="stats" id="stats">
-    <div class="section-label">THE BEAUTY OF NOTHING</div>
+    <div class="section-label">THE NUMBERS NOBODY ROMANTICIZES</div>
     <div class="stats-grid">
       <div class="stat-card reveal">
-        <div class="stat-number">0</div>
-        <div class="stat-label">notifications</div>
+        <div class="stat-number">1 in 2</div>
+        <div class="stat-label">adults who feel alone right now</div>
       </div>
       <div class="stat-card reveal reveal-delay-1">
-        <div class="stat-number">0</div>
-        <div class="stat-label">group chats</div>
+        <div class="stat-number">15</div>
+        <div class="stat-label">cigarettes a day. that's the health equivalent.</div>
       </div>
       <div class="stat-card reveal reveal-delay-2">
-        <div class="stat-number">&infin;</div>
-        <div class="stat-label">inner peace</div>
+        <div class="stat-number">29%</div>
+        <div class="stat-label">higher risk of heart disease</div>
       </div>
       <div class="stat-card reveal reveal-delay-3">
-        <div class="stat-number">1</div>
-        <div class="stat-label">you. that's enough.</div>
+        <div class="stat-number">0</div>
+        <div class="stat-label">people who never felt it</div>
       </div>
     </div>
   </section>
@@ -587,7 +663,7 @@
   <!-- VIRAL -->
   <section class="viral" id="viral">
     <div class="viral-inner reveal">
-      <h2 class="viral-title">being alone is viral</h2>
+      <h2 class="viral-title">loneliness is the most shared feeling on earth</h2>
       <div class="viral-embed" id="tweet-container"></div>
     </div>
   </section>
@@ -600,12 +676,12 @@
       <div class="step-card reveal">
         <div class="step-number">01</div>
         <div class="step-title">Create a Wallet</div>
-        <p class="step-desc">Download Phantom or Solflare. A quiet place for your SOL.</p>
+        <p class="step-desc">Download Phantom or Solflare. Yes, your wallet starts alone too.</p>
       </div>
       <div class="step-card reveal reveal-delay-1">
         <div class="step-number">02</div>
         <div class="step-title">Get SOL</div>
-        <p class="step-desc">Buy SOL on Binance, Coinbase, or Bybit. Send it to your wallet.</p>
+        <p class="step-desc">Buy SOL on Binance, Coinbase, or Bybit. Send it over.</p>
       </div>
       <div class="step-card reveal reveal-delay-2">
         <div class="step-number">03</div>
@@ -615,8 +691,24 @@
       <div class="step-card reveal reveal-delay-3">
         <div class="step-number">04</div>
         <div class="step-title">Swap for $alone</div>
-        <p class="step-desc">Paste the contract address. Swap. Then put your phone down and breathe.</p>
+        <p class="step-desc">Paste the contract address. Swap. You just bought the most honest token on Solana.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- MHA -->
+  <section class="mha" id="mha">
+    <div class="mha-inner reveal">
+      <h2 class="mha-title">100% OF FEES GO TO MENTAL HEALTH AMERICA</h2>
+      <p class="mha-subtitle">because $alone is more than a ticker.</p>
+      <p class="mha-body">
+        Mental Health America has been doing this since 1909 — the oldest mental health nonprofit in the country. They run free, anonymous screenings for depression, anxiety, and loneliness at <a href="https://mhascreening.org" target="_blank" rel="noopener">mhascreening.org</a>. They lobby for better policy. They reach people before the crisis hits, not after.
+        <br><br>
+        Every $alone trade routes its creator fees straight to MHA. No middle wallet. No "marketing budget". No promises that quietly disappear.
+        <br><br>
+        You're not just holding a token. You're funding the part of the system that actually picks up the phone.
+      </p>
+      <a class="mha-cta" href="https://mhanational.org" target="_blank" rel="noopener">mhanational.org &rarr;</a>
     </div>
   </section>
 
@@ -625,7 +717,7 @@
     <img class="footer-bg" src="./static/bg.png" alt="">
     <div class="footer-overlay"></div>
     <div class="footer-content reveal">
-      <div class="footer-text">you were always enough alone</div>
+      <div class="footer-text">you are not alone in feeling alone.</div>
       <div class="footer-links">
         <a class="footer-link" id="footer-twitter" href="#" target="_blank" rel="noopener">Twitter</a>
         <a class="footer-link" id="footer-community" href="#" target="_blank" rel="noopener">Community</a>
